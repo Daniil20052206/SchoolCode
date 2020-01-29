@@ -1,61 +1,53 @@
-<IDOCTYPE html>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>My super page</title>
-    <meta charsest="utf-8">
-    <meta name="viewport" content="wigth=device-width,height=device-wight,intitial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <!--<link rel="stylesheet" type="text/css" href=" ./style.css"-->
     <style>
         body {
-           font-size: 16px;
-           padding: 24px;
+            font-size: 16px;
+            padding: 0px;
         }
-        .simple-button {
-            display: inline-block;
-            box-sizing: border-box;
-            background: #f6a800;
-            color: #fbff00;
-            border: #045c97;
-            border-radius: 4px;
-            padding: 16px;
-            margin: 8px;
-            cursor: pointer;
-            box-shadow: 0px 4px 4px 4px rgb(0,0,0,0.2);
-        }
-        .simple-button:hover {
-            background-color: #fbff00;
-            border-color: #045c97;
-            color: #045c97;
-         } 
-         .simple-button:hover {
-            animation-duration: 5s;
-            animation-name: hover-effect;
-            animation-fill-mode: forwards;
-            animation-direction: normal;
-         }
-
-         @keyframes hover-effect {
-             to {
-                 background-color: #26ff00;
-                 border-color: #045c97;
-                 color: #045c97;
-                 box-shadow: 0px 0px 16px 8px rgb(0,0,0,0.2);
-            }
-         }
-    </style>
-  </head>    
-  <body>
-
-    <span class="simple-button">Press me</span>
-    <span class="simple-button">Press me</span>
-    <span class="simple-button">
-        <div style="background-image: url(https://pngicon.ru/file/uploads/instagram.png);
-        background-size: contain;
-        width: 50px; height: 50px;"></div>
-    </span>
-    <span class="simple-button">Press me</span>
-</body>    
-</html>> 
-     
-
-        
+       .short-info {
+           position: relative;
+           display: grid;
+           overflow: hidden;
+           height: 100vh;
+           margin: 0px;
+           grid-template-columns: 1fr 1.7fr;
+           grid-template-rows: 0.25fr 1fr 0.5fr;
+           grid-template-areas:
+                    "name links"
+                    "about links"
+                    "about photo";
+       }    
+       .photo-block {           
+           grid-area: photo;
+           background: red;
+       }
+       .name-block {
+           grid-area: name;
+           background: rgb(255, 115, 1);
+       }
+       .about-me-block {
+           grid-area: about;
+           background: rgb(102, 255, 1);
+       }
+       .links-block {
+           grid-area: links;
+           background: yellow;
+       }
+    </style> 
+</head>
+<body>
+     <div id="pagel" class="short-info">
+       <div class="photo-block"></div>
+       <div class="name-block"></div>   
+       <div class="about-me-block"></div>
+       <div class="links-block"></div>
+    </div>
+</body>
+</html>
