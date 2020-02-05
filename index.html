@@ -17,35 +17,48 @@
            overflow: hidden;
            height: 100vh;
            margin: 0px;
-           grid-template-columns: 1fr 1.7fr;
-           grid-template-rows: 0.25fr 1fr 0.5fr;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 1fr 1fr 0.5fr;
            grid-template-areas:
-                    "name links"
-                    "about links"
-                    "about photo";
+                    "photo name"
+                    "links name"
+                    "about about";
        }    
        .photo-block {           
            grid-area: photo;
-           background: red;
+           background: rgb(0, 130, 255);
+           align-items: flex-end;
+           justify-content: flex-end;
        }
        .name-block {
            grid-area: name;
-           background: rgb(255, 115, 1);
+           background: rgb(0, 140, 255);
        }
        .about-me-block {
            grid-area: about;
-           background: rgb(102, 255, 1);
+           background: rgb(0, 170, 255);
        }
        .links-block {
            grid-area: links;
            background: yellow;
        }
+       .photo-image {
+           width: 200px;
+           height: 200px;
+           border-radius: 50%;
+           background-image: url(https://static.probusiness.io/n/03/d/38097027_439276526579800_2735888197547458560_n.jpg);
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
+       }
     </style> 
 </head>
 <body>
      <div id="pagel" class="short-info">
-       <div class="photo-block"></div>
-       <div class="name-block"></div>   
+         <div class="photo-block">
+            <div class="photo-image"></div>
+         </div>
+       <div class="name-block">Daniil</div>   
        <div class="about-me-block"></div>
        <div class="links-block"></div>
     </div>
