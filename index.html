@@ -18,38 +18,74 @@
            height: 100vh;
            margin: 0px;
            grid-template-columns: 1fr 1fr;
-           grid-template-rows: 1fr 1fr 0.5fr;
+           grid-template-rows: 1fr 1fr auto;
            grid-template-areas:
                     "photo name"
-                    "links name"
-                    "about about";
+                    "photo about"
+                    "links links";
        }    
        .photo-block {           
            grid-area: photo;
-           background: rgb(0, 130, 255);
-           align-items: flex-end;
-           justify-content: flex-end;
+           display: flex;
+           background: rgb(0, 170, 255);
+           align-items: center;
+           justify-content: center;
+       }
+       .photo-image {
+           width: 300px;
+           height: 300px;
+           border-radius: 50%;
+           background-image: url(https://99px.ru/sstorage/53/2016/12/tmb_188020_7572.jpg);
+           background-size: cover;
+           background-repeat: no-repeat;
+           background-position: center;
        }
        .name-block {
            grid-area: name;
-           background: rgb(0, 140, 255);
+           display:flex;
+           background:rgb(0, 170, 255);
+           padding: 15px;
+           font-size: 325%;
+           align-items: flex-end;
+           justify-content: flex-start;
        }
        .about-me-block {
            grid-area: about;
            background: rgb(0, 170, 255);
+           font-size: 150%;
+           padding: 15px;
+           overflow: hidden;
+           text-overflow: ellipsis;
        }
        .links-block {
            grid-area: links;
-           background: yellow;
+           background: rgb(0, 255, 191);
+           display: flex;
+           flex-wrap: wrap;
+           align-items: center;
+           justify-content: center;
        }
-       .photo-image {
-           width: 200px;
-           height: 200px;
-           border-radius: 50%;
-           background-image: url(https://static.probusiness.io/n/03/d/38097027_439276526579800_2735888197547458560_n.jpg);
-           background-size: cover;
-           background-repeat: no-repeat;
-           background-position: center;
+       .links-block>a {
+           display: inline-flex;
+           height: 64px;
+           width: 64px;
+           margin: 16px;
+           align-items: center;
+           justify-content: center;
+           background: lawngreen;
+           color: #1342a8;
+       }
+       .links-block>a.link-vk {
+           background: url(https://upload.wikimedia.org/wikipedia/commons/thumb/2/21/VK.com-logo.svg/1200px-VK.com-logo.svg.png) no-repeat 50% / contain;
+       }
+       .links-block>a.link-instagram {
+           background: url(https://www.batumiresidence.com/assets/images/icons/instagram.png) no-repeat 50% / contain;
+       }
+       .links-block>a.link-viber {
+           background: url(https://mp-device.com/wp-content/uploads/2015/02/Klassika-zhanra-obshheniya-Viber-256x256.png) no-repeat 50% / contain;
+       }
+       .links-block>a.link-facebook {
+           background: url(https://www.stickpng.com/assets/images/58e919b0eb97430e819064ff.png) no-repeat 50% / contain;
        }
     </style> 
 </head>
@@ -59,8 +95,13 @@
             <div class="photo-image"></div>
          </div>
        <div class="name-block">Daniil</div>   
-       <div class="about-me-block"></div>
-       <div class="links-block"></div>
+       <div class="about-me-block">Всё об уходе за домашними питомцами!</div>
+       <div class="links-block">
+         <a href="#page1" class="link-vk"></a>
+         <a href="#page2" class="link-instagram"></a>
+         <a href="#page3" class="link-viber"></a>
+         <a href="#page4" class="link-facebook"></a>
+        </div>
     </div>
 </body>
 </html>
