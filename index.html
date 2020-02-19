@@ -7,6 +7,7 @@
     <title>Document</title>
     <!--<link rel="stylesheet" type="text/css" href=" ./style.css"-->
     <style>
+
         body {
             font-size: 16px;
             padding: 0px;
@@ -86,6 +87,21 @@
        }
        .links-block>a.link-facebook {
            background: url(https://www.stickpng.com/assets/images/58e919b0eb97430e819064ff.png) no-repeat 50% / contain;
+       }
+       
+       @media (max-width: 320px) {
+        .short-info {
+           position: relative;
+           display: grid;
+           overflow: hidden;
+           height: 100vh;
+           margin: 0px;
+           grid-template-columns: 1fr 1fr;
+           grid-template-rows: 1fr 1fr auto;
+           grid-template-areas:
+                    "photo name"
+                    "photo about"
+                    "links links"   
        }
     </style> 
 </head>
